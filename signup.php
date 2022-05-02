@@ -184,7 +184,7 @@
 
           <main class="container">
             <div class="bg-light p-5 rounded mt-3">
-                <h1>Signup Success</h1>
+                <h2>Signup Success</h2>
                 <p class="lead">Now you can login from <a href="login.html">here</a>.</p>
 
 <?
@@ -192,7 +192,7 @@
             //echo "Error: " . $sql . "<br>" . $conn->error;
            ?> <main class="container">
             <div class="bg-light p-5 rounded mt-3">
-                <h1>Signup Fail</h1>
+                <h2>Signup Fail ! Try Again</h2>
                 <p class="lead">Something went wrong,<a href="signup.html">Go back</a>
                 </p>
             </div>
@@ -203,6 +203,7 @@
 
         // $conn->close();
         return $error;
+        $conn->close();
     }
     ?>
  
