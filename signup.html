@@ -28,7 +28,7 @@
                 <a href="company.html" class="nav-link w-nav-link">Company</a>
                 <a href="login.php" class="nav-link w-nav-link">Login</a>
                <!---->
-                <a href="mailto:vignesh_2102@protonmail.com?subject=Hi" class="nav-link w-nav-link">Contact</a>
+                <a href="mailto:getharish06@gmail.com?subject=Hi" class="nav-link w-nav-link">Contact</a>
             </nav>
             <div data-node-type="commerce-cart-wrapper" data-open-product="" data-wf-cart-type="rightSidebar" data-wf-cart-query="query Dynamo2 {
                 database {
@@ -157,6 +157,20 @@
         </div>
     </div>
 </div>
+<script>
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (username==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+</script>
 <div class="w-nav-overlay" data-wf-ignore=""></div>
 <div class="title-wrap-centre"><h1 style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); opacity: 1; transform-style: preserve-3d;" class="header-h1"><span class="brand-span"></span></h1></div>
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
@@ -172,7 +186,7 @@
             </svg>
         </div>
         <h3 class="text-2xl font-bold text-center">Create your account</h3>
-        <form action="signup.php" method = "post">
+        <form name="myform" action="signup.php" onsubmit="validateForm()"  method = "post" required>
             <div class="mt-4">
                 <div>
                 <div class="mt-4">
@@ -186,7 +200,7 @@
                    </div>
                 <div class="mt-4">
                     <label class="block">Address<label>
-                            <input type="text" placeholder="current Address" name="address"
+                            <input type="text" placeholder="Current Address" name="address"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                <div class="mt-4">

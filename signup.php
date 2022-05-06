@@ -172,7 +172,7 @@
     //echo $address;
     //echo $password;
     //Database Connection
-    $conn = new mysqli("mysql.selfmade.ninja", "vignesh_21", "Vignesh?", "vignesh_21_ecommerce");
+    $conn = new mysqli("localhost", "root", "dvrpe[lF(Ql45M(q", "e_commerce");
     if ($conn->connect_error) {
         die("Database Connection failed".$conn->connect_error);
     } else {
@@ -180,29 +180,28 @@
         $sql = "INSERT INTO `users` (`username`,`email`,`address`, `password`)
         VALUES ('$username','$email','$address','$password');";
         $error = false;
-        if ($conn->query($sql) === true) {?>
+        if($conn->query($sql) === true) {
+          //echo "Signup Success";
 
-          <main class="container">
-            <div class="bg-light p-5 rounded mt-3">
-                <h2>Signup Success</h2>
-                <p class="lead">Now you can login from <a href="login.html">here</a>.</p>
-
-<?
+         echo' <main class="container">';
+           echo' <div class="bg-light p-5 rounded mt-3">';
+              echo'<h2>Signup Success</h2>';
+                echo' <p class="lead">Now you can login from <a href="login.html">here</a>.</p>';
         } else {
+          //echo "Signup Failed Try again!";
             //echo "Error: " . $sql . "<br>" . $conn->error;
-           ?> <main class="container">
-            <div class="bg-light p-5 rounded mt-3">
-                <h2>Signup Fail ! Try Again</h2>
-                <p class="lead">Something went wrong,<a href="signup.html">Go back</a>
+         echo '<main class="container">';
+           echo' <div class="bg-light p-5 rounded mt-3">';
+               echo' <h2>Signup Fail ! Try Again</h2>';
+                echo '<p class="lead">Something went wrong,<a href="signup.html">Go back</a>
                 </p>
             </div>
-        </main>
-<?
+        </main>';
             //$error = $conn->error;
         }
 
         // $conn->close();
-        return $error;
+        //return $error;
         $conn->close();
     }
     ?>

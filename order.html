@@ -27,7 +27,7 @@
                 <a href="company.html" class="nav-link w-nav-link">Company</a>
                 <a href="login.html" class="nav-link w-nav-link">Login</a>
                <!---->
-                <a href="mailto:vignesh_2102@protonmail.com?subject=Hi" class="nav-link w-nav-link">Contact</a>
+                <a href="mailto:getharish06@gmail.com?subject=Hi" class="nav-link w-nav-link">Contact</a>
             </nav>
             <div data-node-type="commerce-cart-wrapper" data-open-product="" data-wf-cart-type="rightSidebar" data-wf-cart-query="query Dynamo2 {
                 database {
@@ -196,9 +196,15 @@
 
 
 <script>
-  console.log("yy");
-  var btn = document.querySelectorAll('.order-button');
-  console.log(btn);
+  var orderBtns = document.querySelectorAll('.order-button');
+
+for(let i=0;i<orderBtns.length;i++){
+
+  orderBtns[i].addEventListener('click' , ()=>{
+    window.location.href="track.html";
+  })
+
+}
 </script>
 </body>
 </html>
